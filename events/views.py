@@ -4,12 +4,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    html = '''
-    <h1>Hey Client, my app is running!</h1>
-    <p>Check out our <a href="/events">offerings</a></p>
-    '''
-
-    return HttpResponse(html)
+    return render(request, 'events/index.html')
 
 
 def event_listing(request):
